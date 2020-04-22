@@ -242,9 +242,6 @@ public class Person {
     return numberOfAnniversaryBeforePension;
   }
 
-  public int getAge() {
-    return age;
-  }
 
 
 }
