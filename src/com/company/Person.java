@@ -51,7 +51,7 @@ public class Person {
 //
 //    }
 //
-
+//
 //    String chekWeight() {
 //        index = weight / (length * length / 10000);
 //        if (index < 18.5) {
@@ -91,7 +91,7 @@ public class Person {
 //
 //        return rase;
 //    }
-
+//
 //    public String chekStatus() {
 //        String che1 = "НЕ совершеннолетний";
 //        String che2 = "Совершеннолетний";
@@ -143,7 +143,7 @@ public class Person {
 //        String sos = chekStatus() + ", " + checkPension();
 //        return sos;
 //    }
-
+//
 //
 //    public String checkLength() {
 //        if (age <= 11 && age >= 8) {
@@ -242,6 +242,9 @@ public class Person {
     return numberOfAnniversaryBeforePension;
   }
 
+  public int getAge() {
+    return age;
+  }
 
 
 }

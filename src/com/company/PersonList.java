@@ -1,16 +1,31 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class PersonList {
 
-  Person[] personList;
+  static Person[] personList;
 
-  public Person[] addPerson() {
+  public static Person[] addPerson(Person person) {
+    if (personList == null) {
+      personList  = new Person[1];
+      personList[0] = person;
 
-    System.out.println(Arrays.toString(personList));
-    return personList;
+      return personList;
+    }
+
+    Person[] newPersonList = new Person[personList.length + 1];
+
+    for (int i = 0; i < personList.length; i++) {
+      newPersonList[i] = personList[i];
+    }
+    newPersonList[personList.length] = person;
+    personList = newPersonList;
+
+    return newPersonList;
   }
 
-
+  public static void printPersonList() {
+    for (Person person : personList) {
+      System.out.println(person.toString());
+    }
+  }
 }
